@@ -1,0 +1,9 @@
+services:
+  nickname-generator:
+    build: .
+    ports:
+      - "8000:8080"
+    volumes:
+      - ./data/words.db:/app/data/words.db
+    environment:
+      - GIN_MODE=release
